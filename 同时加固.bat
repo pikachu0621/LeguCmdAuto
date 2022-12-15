@@ -54,29 +54,29 @@ for /r put\ %%i in (*.apk) do (
 	if !jksPath! == 0 (
 		@echo.
 		echo --------------------------------------------
-		echo [%%~ni.apk]  Î´ÕÒµ½Æ¥ÅäÇ©ÃûÎÄ¼þ 
+		echo [%%~ni.apk]  æœªæ‰¾åˆ°åŒ¹é…ç­¾åæ–‡ä»¶
 		echo --------------------------------------------
 		@echo.
 	) else (
 		@echo.
 		echo --------------------------------------------
-		echo [%%~ni.apk]  ½«Ê¹ÓÃ  [!jksPath!]  ½øÐÐÇ©Ãû  [lib\temp\temp!a!.bat]
+		echo [%%~ni.apk]  å°†ä½¿ç”¨  [!jksPath!]  è¿›è¡Œç­¾å  [lib\temp\temp!a!.bat]
 		echo --------------------------------------------
 		@echo.
 		echo @echo off > lib\temp\temp!a!.bat
-		echo echo ---------------------- ÅäÖÃ²Î¿¼ ---------------------- >> lib\temp\temp!a!.bat
+		echo echo ---------------------- é…ç½®å‚è€ƒ ---------------------- >> lib\temp\temp!a!.bat
 		echo @echo. >> lib\temp\temp!a!.bat
-		echo echo µ±Ç°¼Ó¹ÌµÄAPKÎª:             %%~ni.apk >> lib\temp\temp!a!.bat
-		echo echo µ±Ç°Ç©ÃûÎÄ¼þÎª:              !jksName!.jks >> lib\temp\temp!a!.bat
-		echo echo µ±Ç°Ç©ÃûÎÄ¼þstorePasswordÎª: %storePassword% >> lib\temp\temp!a!.bat
-		echo echo µ±Ç°Ç©ÃûÎÄ¼þkeyPasswordÎª:   %keyPassword% >> lib\temp\temp!a!.bat
-		echo echo µ±Ç°Ç©ÃûÀàÐÍÎª:              [v1 = %v1%], [v2 = %v2%], [v3 = %v3%], [v4 = %v4%] >> lib\temp\temp!a!.bat
+		echo echo å½“å‰åŠ å›ºçš„APKä¸º:             %%~ni.apk >> lib\temp\temp!a!.bat
+		echo echo å½“å‰ç­¾åæ–‡ä»¶ä¸º:              !jksName!.jks >> lib\temp\temp!a!.bat
+		echo echo å½“å‰ç­¾åæ–‡ä»¶storePasswordä¸º: %storePassword% >> lib\temp\temp!a!.bat
+		echo echo å½“å‰ç­¾åæ–‡ä»¶keyPasswordä¸º:   %keyPassword% >> lib\temp\temp!a!.bat
+		echo echo å½“å‰ç­¾åç±»åž‹ä¸º:              [v1 = %v1%], [v2 = %v2%], [v3 = %v3%], [v4 = %v4%] >> lib\temp\temp!a!.bat
 		echo @echo. >> lib\temp\temp!a!.bat
 		echo echo ------------------------------------------------------ >> lib\temp\temp!a!.bat
 		echo @echo. >> lib\temp\temp!a!.bat
 		echo @echo. >> lib\temp\temp!a!.bat
 		echo @echo. >> lib\temp\temp!a!.bat
-		echo echo ---------------------- ¿ªÊ¼¼Ó¹Ì ---------------------- >> lib\temp\temp!a!.bat
+		echo echo ---------------------- å¼€å§‹åŠ å›º ---------------------- >> lib\temp\temp!a!.bat
 		echo @echo. >> lib\temp\temp!a!.bat
 		echo setlocal enabledelayedexpansion >> lib\temp\temp!a!.bat
 		echo java -Dfile.encoding=utf-8 -jar lib\ms-shield.jar -sid %appId% -skey %appKey% -uploadPath %%i -downloadPath out\ >> lib\temp\temp!a!.bat
@@ -100,10 +100,10 @@ for /r put\ %%i in (*.apk) do (
 		echo echo ------------------------------------------------------ >> lib\temp\temp!a!.bat
 		echo @echo. >> lib\temp\temp!a!.bat
 		echo @echo. >> lib\temp\temp!a!.bat
-		echo @echo. >> lib\temp\temp!a!.bat		
-		echo echo ---------------------- Ö´ÐÐÍê³É ---------------------- >> lib\temp\temp!a!.bat
 		echo @echo. >> lib\temp\temp!a!.bat
-		echo echo ¼Ó¹ÌºóµÄÎÄ¼þÂ·¾¶: ~out\%%~ni_legu_sign.apk >> lib\temp\temp!a!.bat
+		echo echo ---------------------- æ‰§è¡Œå®Œæˆ ---------------------- >> lib\temp\temp!a!.bat
+		echo @echo. >> lib\temp\temp!a!.bat
+		echo echo åŠ å›ºåŽçš„æ–‡ä»¶è·¯å¾„: ~out\%%~ni_legu_sign.apk >> lib\temp\temp!a!.bat
 		echo @echo. >> lib\temp\temp!a!.bat
 		echo echo ------------------------------------------------------ >> lib\temp\temp!a!.bat
 		if %isClose% equ true (
